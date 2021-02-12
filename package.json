@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aerabi/typingdnaclient-rxjs/issues"
   },
-  "homepage": "https://github.com/aerabi/typingdnaclient-rxjs#readme"
+  "homepage": "https://github.com/aerabi/typingdnaclient-rxjs#readme",
+  "devDependencies": {
+    "typescript": "^4.1.5"
+  }
 }
