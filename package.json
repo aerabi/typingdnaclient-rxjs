@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
     "test": "npm test"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/aerabi/typingdnaclient-rxjs#readme",
   "devDependencies": {
+    "prettier": "^2.2.1",
     "typescript": "^4.1.5"
   },
   "dependencies": {
