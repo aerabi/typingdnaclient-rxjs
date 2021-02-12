@@ -4,6 +4,7 @@
   "description": "RxJS wrapper for the TypingDna API",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "npm test"
   },
   "repository": {
