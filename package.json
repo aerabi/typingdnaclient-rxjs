@@ -1,0 +1,19 @@
+{
+  "name": "typingdnaclient-rxjs",
+  "version": "1.0.0",
+  "description": "RxJS wrapper for the TypingDna API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerabi/typingdnaclient-rxjs.git"
+  },
+  "author": "Mohammad-Ali A'RÂBI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aerabi/typingdnaclient-rxjs/issues"
+  },
+  "homepage": "https://github.com/aerabi/typingdnaclient-rxjs#readme"
+}
