@@ -31,6 +31,7 @@
     "typescript": "^4.1.5"
   },
   "dependencies": {
+    "rxjs": "^6.6.3",
     "typingdnaclient": "^1.1.1"
   }
 }
