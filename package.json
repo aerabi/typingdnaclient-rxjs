@@ -9,7 +9,7 @@
     "format": "eslint 'src/**/*.{js,ts}' --fix",
     "test": "jest --config jestconfig.json",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run format",
+    "prepublishOnly": "npm run format",
     "preversion": "npm run format",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
