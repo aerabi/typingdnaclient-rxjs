@@ -18,6 +18,11 @@
     "type": "git",
     "url": "git+https://github.com/aerabi/typingdnaclient-rxjs.git"
   },
+  "keywords": [
+    "typingDna",
+    "typingDna API",
+    "typingDna API client"
+  ],
   "author": "Mohammad-Ali A'RÂBI",
   "license": "MIT",
   "bugs": {
