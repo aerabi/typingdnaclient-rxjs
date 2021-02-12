@@ -2,11 +2,17 @@
   "name": "typingdnaclient-rxjs",
   "version": "1.0.0",
   "description": "RxJS wrapper for the TypingDna API",
-  "main": "index.js",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
   "scripts": {
     "build": "tsc",
     "format": "eslint 'src/**/*.{js,ts}' --fix",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run format",
+    "preversion": "npm run format",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
