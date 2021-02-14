@@ -2,6 +2,7 @@
 RxJS wrapper for the TypingDna API
 
 [![npm](https://img.shields.io/npm/v/typingdnaclient-rxjs)](https://www.npmjs.com/package/typingdnaclient)
+[![Infrastructure Tests](https://www.bridgecrew.cloud/badges/github/aerabi/typingdnaclient-rxjs/general)](https://www.bridgecrew.cloud/link/badge?vcs=github&fullRepo=aerabi%2Ftypingdnaclient-rxjs&benchmark=INFRASTRUCTURE+SECURITY)
 
 ## Installation
 ```bash
