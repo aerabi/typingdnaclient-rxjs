@@ -28,7 +28,7 @@ export function toAutoResponse(res: AutoApiResponse): AutoResponse {
     statusCode: res.statusCode,
     action: res.action,
     enrollment: res.enrollment === 1,
-    verification: res.action.includes('verify'),
+    verification: !!res?.action?.includes('verify'),
     result: res.result === 1,
     highConfidence: res.highConfidence === 1,
     customField: res.customField,

@@ -17,6 +17,8 @@ describe('TypingDNAReactiveClient', () => {
 
   it('auto', (done) => {
     client.auto(userId, typingPattern).subscribe((response) => {
+      expect(response.messageCode).toEqual(2);
+      expect(response.verification).toEqual(false);
       expect(response.statusCode).toEqual(200);
       done();
     });
