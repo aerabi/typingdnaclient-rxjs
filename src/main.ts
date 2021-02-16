@@ -1,4 +1,5 @@
 import { Observable, Subscriber } from 'rxjs';
+import { AutoResponse } from './types';
 
 function bindSubscriber(subscriber: Subscriber<any>) {
   return (error: any, response: any) => {
@@ -19,7 +20,7 @@ export class TypingDNAReactiveClient {
     this._client = new TypingDNAClient(apiKey, apiSecret, apiServer);
   }
 
-  public auto(userId: string, typingPattern: string, options?: { customField: any }): Observable<any> {
+  public auto(userId: string, typingPattern: string, options?: { customField: any }): Observable<AutoResponse> {
     if (options) {
       return new Observable((observer) => this._client.auto(userId, typingPattern, options, bindSubscriber(observer)));
     }
