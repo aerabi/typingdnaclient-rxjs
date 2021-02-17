@@ -34,3 +34,54 @@ export function toAutoResponse(res: AutoApiResponse): AutoResponse {
     customField: res.customField,
   };
 }
+
+export interface VerifyApiResponse {
+  message: string;
+  messageCode?: string;
+  success: number;
+  result: number;
+  score: number;
+  confidenceInterval?: number;
+  confidence?: number;
+  netScore?: number;
+  deviceSimilarity?: number;
+  positions?: number[];
+  comparedSamples?: number;
+  previousSamples?: number;
+  statusCode: number;
+}
+
+export interface VerifyResponse {
+  message: string;
+  messageCode?: string;
+  success: boolean;
+  result: boolean;
+  score: number;
+  confidenceInterval?: number;
+  confidence?: number;
+  netScore?: number;
+  deviceSimilarity?: number;
+  positions?: number[];
+  comparedSamples?: number;
+  previousSamples?: number;
+  statusCode: number;
+}
+
+export function toVerifyResponse(res: VerifyApiResponse): VerifyResponse {
+  console.log(res);
+  return {
+    message: res.message,
+    messageCode: res.messageCode,
+    success: res.success === 1,
+    result: res.result === 1,
+    score: res.score,
+    confidenceInterval: res.confidenceInterval,
+    confidence: res.confidence,
+    netScore: res.netScore,
+    deviceSimilarity: res.deviceSimilarity,
+    positions: res.positions,
+    comparedSamples: res.comparedSamples,
+    previousSamples: res.previousSamples,
+    statusCode: res.statusCode,
+  };
+}

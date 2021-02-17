@@ -25,10 +25,22 @@ const client = new TypingDNAReactiveClient(apiKey, apiSecret, server);
 ```
 
 ## Available Methods
+
 ```typescript
 class TypingDNAReactiveClient {
-  auto(userId: string, typingPattern: string, options?: { customField: any }): Observable<any>;
+  auto(
+    userId: string,
+    typingPattern: string,
+    options?: { customField: any }
+  ): Observable<AutoResponse>;
+
   save(userId: string, typingPattern: string): Observable<any>;
-  verify(userId: string, typingPattern: string, quality: number, options: { deviceSimilarityOnly: boolean }): Observable<any>;
+
+  verify(
+    userId: string,
+    typingPattern: string,
+    quality: number,
+    options: { deviceSimilarityOnly: boolean }
+  ): Observable<VerifyResponse>;
 }
 ```

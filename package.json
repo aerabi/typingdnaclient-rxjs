@@ -1,6 +1,6 @@
 {
   "name": "typingdnaclient-rxjs",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "RxJS wrapper for the TypingDna API",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",

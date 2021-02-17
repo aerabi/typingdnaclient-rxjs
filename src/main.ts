@@ -1,5 +1,5 @@
 import { Observable, Subscriber } from 'rxjs';
-import { AutoApiResponse, AutoResponse, toAutoResponse } from './types';
+import { AutoApiResponse, AutoResponse, toAutoResponse, toVerifyResponse, VerifyApiResponse, VerifyResponse } from './types';
 import { map } from 'rxjs/operators';
 
 function bindSubscriber(subscriber: Subscriber<any>) {
@@ -39,7 +39,9 @@ export class TypingDNAReactiveClient {
     typingPattern: string,
     quality = 2,
     options: { deviceSimilarityOnly: boolean } = { deviceSimilarityOnly: false },
-  ): Observable<any> {
-    return new Observable((observer) => this._client.verify(userId, typingPattern, quality, options, bindSubscriber(observer)));
+  ): Observable<VerifyResponse> {
+    return new Observable<VerifyApiResponse>((observer) => this._client.verify(userId, typingPattern, quality, options, bindSubscriber(observer))).pipe(
+      map(toVerifyResponse),
+    );
   }
 }
